@@ -14,7 +14,6 @@ The implementation centers on **Python CSV processing, T-SQL, and SQL Server acc
 | [python-sql-data-external-data-providers/](python-sql-data-external-data-providers/) | Provider ETL and a CTA Plan alert-monitoring example | [etl_code_python_sql.py](python-sql-data-external-data-providers/etl_code_python_sql.py) |
 | [examples/containerized_corporate_events/](examples/containerized_corporate_events/) | Corporate-action extraction, snapshot comparison, and the original Docker recipe | [corporate_events.py](examples/containerized_corporate_events/corporate_events.py) |
 | [sql/](sql/) | Corporate-action calculations performed directly in SQL Server | [sql_with_computation.sql](sql/sql_with_computation.sql) |
-| [docs/](docs/) | Original README copies and the revisions used for consolidation | [Source provenance](docs/source-provenance.md) |
 
 ## What the code covers
 
@@ -142,7 +141,7 @@ These are historical implementations and reference examples. Live database execu
 
 Supporting material includes the exchange-code workbook, QAD query-training archives, a master CSV, a log, and a historical ODBC library. Their original locations are retained alongside the code.
 
-## Consolidation and original documentation
+## Consolidation
 
 This repository combines:
 
@@ -152,6 +151,6 @@ This repository combines:
 | `containerization-via-dockerization` | `examples/containerized_corporate_events/` |
 | `sql` | `sql/` |
 
-The [source provenance](docs/source-provenance.md) records the exact original revisions. Copies of all three original READMEs are preserved in [docs/source-readmes/](docs/source-readmes/). This root README describes the inspected combined code; the preserved documents retain their original wording and historical setup instructions.
+This root README describes the inspected combined code.
 
-This public repository begins with an anonymized snapshot and an independent root commit. The original consolidated repository and its historical commits are retained separately. The three projects' original Git histories are not part of this public repository's commit ancestry. The preserved original READMEs document the earlier projects and may refer to their former locations.
+This public repository begins with an anonymized snapshot and an independent root commit. The original consolidated repository and its historical commits are retained separately. The three projects' original Git histories are not part of this public repository's commit ancestry.
