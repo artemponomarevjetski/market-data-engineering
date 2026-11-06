@@ -75,8 +75,8 @@ The script starts its browser and polling loop at module level. Review the brows
 
 Clone the consolidated repository:
 
-    git clone https://github.com/artemponomarevjetski/python-sql-market-data.git
-    cd python-sql-market-data
+    git clone https://github.com/artemponomarevjetski/market-data-engineering.git
+    cd market-data-engineering
 
 Start by inspecting a component and its arguments. These help commands exit before database access, snapshot processing, or output generation:
 
@@ -154,4 +154,4 @@ This repository combines:
 
 The [source provenance](docs/source-provenance.md) records the exact original revisions. Copies of all three original READMEs are preserved in [docs/source-readmes/](docs/source-readmes/). This root README describes the inspected combined code; the preserved documents retain their original wording and historical setup instructions.
 
-The two imported projects were incorporated as file snapshots. Their original Git histories were retained in private local bundles during consolidation; they are not merged into this repository's public commit ancestry.
+This public repository begins with an anonymized snapshot and an independent root commit. The original consolidated repository and its historical commits are retained separately. The three projects' original Git histories are not part of this public repository's commit ancestry. The preserved original READMEs document the earlier projects and may refer to their former locations.
