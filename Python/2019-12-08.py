@@ -874,9 +874,12 @@ def main(start_date_, working_dir_, nblocks_, email_notification_, top_):
                 "list of recipients when email notifications are enabled"
             )
         # Configure report recipients with MARKET_DATA_REPORT_RECIPIENTS.
-#    MESSAGE = create_message('artemponomarevjetski@gmail.com',\
- #                            CLIENT_EMAIL, 'Completion alert', EMAIL)
-        yagmail.SMTP('artemponomarevjetski@gmail.com').send(CLIENT_EMAIL, 'Completion alert', EMAIL)
+        mail_sender = os.environ.get("MARKET_DATA_EMAIL_SENDER", "").strip()
+        if not mail_sender:
+            raise ValueError(
+                "Set MARKET_DATA_EMAIL_SENDER when email notifications are enabled"
+            )
+        yagmail.SMTP(mail_sender).send(CLIENT_EMAIL, 'Completion alert', EMAIL)
         print('\n\nemailed to the user:\n'+ALERT, datetime.now())
 
     print('\n\nexiting ... ', datetime.now())
@@ -907,7 +910,7 @@ if __name__ == '__main__':
         '--working-directory',
         type=str, # make it start with ./ and end with /
         default='./temp/',
-        help='call Art at 409-443-4701, he\'ll refer you to Neeraj'
+        help='Working directory for this operation'
     )
     parser.add_argument(
         '-n',

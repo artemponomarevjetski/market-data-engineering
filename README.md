@@ -122,10 +122,13 @@ The dated ETL variants and provider ETL use these environment settings:
 | `MARKET_DATA_REFERENCE_FILENAME` | `master_file_reference.csv`; input CSV located beside the selected ETL script, copied into its working directory and reused there. |
 | `MARKET_DATA_COMPARISON_FILENAME` | `master_table_merged.csv`; comparison output written in the working directory. |
 | `MARKET_DATA_REPORT_RECIPIENTS` | Comma-separated recipient addresses; required only when the existing email-notification path executes. There is no default recipient. |
+| `MARKET_DATA_EMAIL_SENDER` | Sender account; required only when the existing email-notification path executes. There is no default sender. |
 
 The two filenames must be nonempty basenames without directory components or null characters, and must differ even when compared without case. To retain an existing local input or output naming convention, set the corresponding variable privately to that filename before running the script. The reference file must exist beside the chosen script; the ETL checks this before its existing directory-clearing step. These checks do not make an arbitrary working directory safe: continue to use a dedicated disposable directory.
 
-Report recipients are trimmed and empty comma-separated entries are ignored; an empty final list raises an error. Mail sender authentication and the existing notification conditions still need component-specific configuration. Recipient lookup stays inside that notification path. Published notification text and historical log paths use neutral project labels.
+Report recipients are trimmed and empty comma-separated entries are ignored; an empty final list raises an error. The sender is trimmed and must be nonempty. Sender and recipient lookup stay inside the existing ETL notification path, so disabled notifications require neither mail setting. Configure authentication privately through yagmail; no mail credentials are included in the code. Published notification text and historical log paths use neutral project labels.
+
+The CTA Plan monitor uses the same `MARKET_DATA_EMAIL_SENDER` and `MARKET_DATA_REPORT_RECIPIENTS` variables when constructing an alert. Its MIME recipient header and SMTP delivery use the same configured recipient list.
 
 ### Execution notes
 
@@ -139,18 +142,18 @@ These are historical implementations and reference examples. Live database execu
 
 [Python/](Python/) preserves dated scripts from December 2019 through February 2020, corporate-event and comparison variants, and other working versions. Files named `test_corporate_events.py`, `test.py_bckp`, and `test.py_new` are historical scripts or working copies.
 
-Supporting material includes the exchange-code workbook, QAD query-training archives, a master CSV, a log, and a historical ODBC library. Their original locations are retained alongside the code.
+Supporting material includes the exchange-code workbook, QAD query-training archives, a master CSV, a log, and a historical ODBC library. Their original locations are retained alongside the code. Personal workbook metadata, embedded printer settings, and macOS archive metadata have been removed; archive filenames use neutral labels. Workbook cells and formulas, the archived query/data contents, public author credit, and vendor attribution are preserved.
 
 ## Consolidation
 
 This repository combines:
 
-| Original project | Current location |
+| Component | Current location |
 |---|---|
-| `python-sql-market-data` | `Python/` and `python-sql-data-external-data-providers/` |
-| `containerization-via-dockerization` | `examples/containerized_corporate_events/` |
-| `sql` | `sql/` |
+| Market-data processing | `Python/` and `python-sql-data-external-data-providers/` |
+| Containerized corporate-event examples | `examples/containerized_corporate_events/` |
+| Standalone SQL calculations | `sql/` |
 
 This root README describes the inspected combined code.
 
-This public repository begins with an anonymized snapshot and an independent root commit. The original consolidated repository and its historical commits are retained separately. The three projects' original Git histories are not part of this public repository's commit ancestry.
+This public repository has an independent root commit. Original source histories are retained separately and are not part of this repository's commit ancestry. Privacy cleanup applies to the current files; earlier public commits retain their previous contents. Public author credit and vendor attribution are preserved.

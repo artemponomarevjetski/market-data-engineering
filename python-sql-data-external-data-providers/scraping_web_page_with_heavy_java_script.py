@@ -3,6 +3,7 @@ This code is for training purpose only, it cannot be used on unauthorized webpag
 The main trick for scraping a webpage with lots of Java code lies here:
 innerHTML = browser.execute_script("return document.body.innerHTML") #returns the inner HTML as a string
 """
+import os
 import time
 import datetime
 import yagmail
@@ -69,9 +70,6 @@ link_consolidated_tape_association = 'https://www.ctaplan.com/'
 print(link_consolidated_tape_association)
 link_alerts = "https://www.ctaplan.com/alerts#110000144324"
 print(link_alerts)
-client_email = 'artem_ponomarev@yahoo.com' # subsitute this with your client's email
-# Optional alternate recipient: reviewer@example.com
-print(client_email)
 message_old=""
 browser = webdriver.Firefox()
 
@@ -98,10 +96,27 @@ while True:
     fset_text = fset.text_content()
     alert=alert_extraction1(fset_text)
     email="Alert Date: " + date +"\n" + alert + "\n\nBanzai!"
-    message=create_message("artemponomarevjetski@gmail.com", client_email, "News alert #"+str(i), email)
+    mail_sender = os.environ.get("MARKET_DATA_EMAIL_SENDER", "").strip()
+    if not mail_sender:
+        raise ValueError(
+            "Set MARKET_DATA_EMAIL_SENDER before sending alerts"
+        )
+    client_email = [
+        address.strip()
+        for address in os.environ.get(
+            "MARKET_DATA_REPORT_RECIPIENTS", ""
+        ).split(",")
+        if address.strip()
+    ]
+    if not client_email:
+        raise ValueError(
+            "Set MARKET_DATA_REPORT_RECIPIENTS to a comma-separated list of recipients"
+        )
+    print(client_email)
+    message=create_message(mail_sender, ", ".join(client_email), "News alert #"+str(i), email)
     print("Emailed to client:\n" + message)
     if message != message_old:
-        yagmail.SMTP('artemponomarevjetski@gmail.com').send(client_email, "News alert #"+str(i), message)
+        yagmail.SMTP(mail_sender).send(client_email, "News alert #"+str(i), message)
     message_old = message
     
     i+=1

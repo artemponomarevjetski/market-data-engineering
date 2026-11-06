@@ -824,9 +824,12 @@ A.SecCode                                       -- SecCode      -- 0
                 "Set MARKET_DATA_REPORT_RECIPIENTS to a comma-separated "
                 "list of recipients when email notifications are enabled"
             )
-#    MESSAGE = create_message('artemponomarevjetski@gmail.com',\
- #                            CLIENT_EMAIL, 'Completion alert', EMAIL)
-        yagmail.SMTP('artemponomarevjetski@gmail.com').send(client_email, 'Completion alert', email)
+        mail_sender = os.environ.get("MARKET_DATA_EMAIL_SENDER", "").strip()
+        if not mail_sender:
+            raise ValueError(
+                "Set MARKET_DATA_EMAIL_SENDER when email notifications are enabled"
+            )
+        yagmail.SMTP(mail_sender).send(client_email, 'Completion alert', email)
         print('\n\nemailed to the user:\n'+alert, datetime.now())
 
     print('\n\nexiting ... ', datetime.now())
@@ -857,7 +860,7 @@ if __name__ == '__main__':
         '--working-directory',
         type=str, # make it start with ./ and end with /
         default=None,
-        help='call Art at 409-443-4701, he\'ll refer you to Neeraj'
+        help='Working directory for this operation'
     )
     PARSER.add_argument(
         '-n',

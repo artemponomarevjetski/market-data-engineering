@@ -158,7 +158,7 @@ if __name__ == '__main__':
         '--working-directory',
         type=str, # make it start with ./ and end with /
         default=None,
-        help='call Art at 409-443-4701'
+        help='Working directory for this operation'
     )
 
     ARGS = PARSER.parse_args()
