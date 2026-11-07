@@ -9,7 +9,7 @@ This directory contains **40 SQL files**: one standalone corporate-action calcul
 | Entry point | What it contains |
 |---|---|
 | [sql_with_computation.sql](sql_with_computation.sql) | A corporate-action query that calculates hypothetical resulting shares, fractional shares, cash in lieu, and total cash. |
-| [qad_training/](qad_training/) | The unpacked training collection: 39 SQL files and nine supporting data files. |
+| [qad_training/](qad_training/) | The unpacked training collection: 39 SQL files with supporting reference data and query exports. |
 | [Training guide and file index](qad_training/README.md) | Descriptions of the individual queries, reconciliation variants, and supporting exports. |
 
 For the Python workflows and the rest of the project, see the [repository README](../README.md).
@@ -77,7 +77,7 @@ Dates are also formatted as text. The existing `ORDER BY EffectiveDate` uses the
 
 ## Explore the training collection
 
-The [complete training index](qad_training/README.md) covers all 39 SQL files and nine supporting files. Useful starting points include:
+The [complete training index](qad_training/README.md) covers all 39 SQL files and the supporting datasets. Useful starting points include:
 
 | Topic | Examples |
 |---|---|
@@ -89,10 +89,10 @@ The [complete training index](qad_training/README.md) covers all 39 SQL files an
 | Security-master reconciliation | [EmulationMasterTable.sql](qad_training/EmulationMasterTable.sql) and its numbered variants 1 through 24. |
 | Provider views and fundamentals | [Datastream and Worldscope view examples](qad_training/Extra_DS2_and_WS_sample_queries_using_Views.sql). |
 
-The numbered reconciliation variants are independent working versions, rather than a sequence of database migrations. `10_Update_Tables.sql` reads update logs and change tables. The smaller `SQLQuery_*.sql` files contain exploratory fragments; for example, `SQLQuery_2.sql` includes `SELECT VERSION()`, which requires adjustment for SQL Server.
+The numbered reconciliation variants are independent working versions, rather than a sequence of database migrations. `10_Update_Tables.sql` reads update logs and change tables. The smaller `SQLQuery_*.sql` files contain exploratory fragments; for example, `SQLQuery_v2.sql` includes `SELECT VERSION()`, which requires adjustment for SQL Server.
 
 ## Relationship to the Python examples
 
-The [corporate-event extractor](../examples/containerized_corporate_events/corporate_events.py) uses related calculations inside a Python workflow that connects through ODBC and writes dated CSV output. Its active date filters and price-date predicate differ from the standalone SQL file, so the two implementations can return different results.
+The [corporate-event extractor](../containerized_corporate_events/corporate_events.py) uses related calculations inside a Python workflow that connects through ODBC and writes dated CSV output. Its active date filters and price-date predicate differ from the standalone SQL file, so the two implementations can return different results.
 
 These are historical reference implementations. The documentation reflects inspection of the committed source files; live database execution and compatibility with a particular provider schema require separate validation.
