@@ -27,12 +27,12 @@ The numbered master-table variants are independent working versions. They are re
 | [master_file_sorted_by_ticker.csv](master_file_sorted_by_ticker.csv) | Complete master table from the former Numbers document: 65,534 records and six columns. |
 | [master_file_sorted_by_ticker_links.csv](master_file_sorted_by_ticker_links.csv) | All 107 embedded hyperlinks from the Numbers document, with the original link text and URL targets. |
 | [QA_Direct.csv](QA_Direct.csv) | Provider-query export. |
-| [RICdata.csv](RICdata.csv) | Original RIC export: 247 records and 10 columns. |
-| [RICdata_from_xlsx.csv](RICdata_from_xlsx.csv) | Verified workbook export: two records and 10 columns. |
-| [Results.csv](Results.csv) | Original query-result export: 79 records and four columns. |
-| [Results_from_xlsx.csv](Results_from_xlsx.csv) | Verified workbook export: 852 records and 74 columns, preserving headers, blanks, leading-zero identifiers, significant whitespace, and large integer values. |
+| [ric_history.csv](ric_history.csv) | RIC validity history for ten security IDs, with tickers, quote IDs, sequence numbers, and start/end dates and times: 247 records and 10 columns. Formerly `RICdata.csv`. |
+| [citigroup_datastream_name_history.csv](citigroup_datastream_name_history.csv) | Citigroup example linking security and vendor identifiers to historical Datastream quote names (`TRAVELERS GP.` and `CITIGROUP`) and validity dates: two records and 10 columns. Formerly `RICdata_from_xlsx.csv`. |
+| [datastream_quote_name_history.csv](datastream_quote_name_history.csv) | Datastream quote-name history for 22 `InfoCode` values: 79 records and four columns (`InfoCode`, `StartDate`, `EndDate`, `DSQtName`). Formerly `Results.csv`. |
+| [security_master_ric_datastream_join.csv](security_master_ric_datastream_join.csv) | Joined detail across security-master records, provider mappings, RDC quotes/RIC history, and Datastream quote/name history: 852 records and 74 columns. Formerly `Results_from_xlsx.csv`. |
 
-The original `RICdata.csv` and `Results.csv` contain different datasets from the corresponding `_from_xlsx.csv` exports. Both versions are retained. The two Excel workbooks were removed after all populated cells were compared with their exports; their date cells are represented as `yyyy-mm-dd` text in CSV.
+The Citigroup name-history and security-master join CSVs preserve the populated data from the two removed Excel workbooks; their date cells are represented as `yyyy-mm-dd` text. The RIC-history and Datastream quote-name-history CSVs contain separate original datasets. All four datasets retain their original headers, record order, repeated rows and column names, blanks, leading-zero identifiers, significant whitespace, and large integer values.
 
 The Numbers document was removed after all 393,210 table cells matched `master_file_sorted_by_ticker.csv` and its hyperlinks were preserved separately. In the links CSV, `csv_row` is one based and includes the main CSV header; `column_number` is also one based. The 107 links use 34 distinct original URL targets.
 
