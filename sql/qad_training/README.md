@@ -15,7 +15,7 @@ This directory contains the unpacked QAD training material: **39 SQL files and n
 | [10_Update_Tables.sql](10_Update_Tables.sql) | Reading update-log and change tables. |
 | [EmulationMasterTable.sql](EmulationMasterTable.sql), plus numbered variants 1 through 24 | Successive security-master and ticker-reconciliation experiments. |
 | [Extra_DS2_and_WS_sample_queries_using_Views.sql](Extra_DS2_and_WS_sample_queries_using_Views.sql) | Datastream and Worldscope provider views for prices, market capitalization, fundamentals, and foreign exchange. |
-| [SQLQuery_1.sql](SQLQuery_1.sql), [SQLQuery_2.sql](SQLQuery_2.sql), and [SQLQuery_3.sql](SQLQuery_3.sql) | Smaller mapping, RIC, expression, and date-format experiments. |
+| [SQLQuery_v1.sql](SQLQuery_v1.sql), [SQLQuery_v2.sql](SQLQuery_v2.sql), and [SQLQuery_v3.sql](SQLQuery_v3.sql) | Smaller mapping, RIC, expression, and date-format experiments. |
 
 The numbered master-table variants are independent working versions. They are retained for comparison and are not migrations that should be executed in order.
 
@@ -25,24 +25,30 @@ The numbered master-table variants are independent working versions. They are re
 |---|---|
 | [master_file.csv](master_file.csv) | Security-master data; identical to the existing [Python/master_file.csv](../../Python/master_file.csv). |
 | [master_file.csv.bz2](master_file.csv.bz2) | A bzip2-compressed copy of the same master CSV. |
-| [master_file_sorted_by_ticker.numbers](master_file_sorted_by_ticker.numbers) | A retained Apple Numbers master-table document. |
+| [master_file_sorted_by_ticker.csv](master_file_sorted_by_ticker.csv) | Complete master table from the former Numbers document: 65,534 records and six columns. |
+| [master_file_sorted_by_ticker_links.csv](master_file_sorted_by_ticker_links.csv) | All 107 embedded hyperlinks from the Numbers document, with the original link text and URL targets. |
 | [QA_Direct.csv](QA_Direct.csv) | Provider-query export. |
-| [RICdata.csv](RICdata.csv) and [RICdata.xlsx](RICdata.xlsx) | RIC-related supporting files in their original formats. |
-| [Results.csv](Results.csv) and [Results.xlsx](Results.xlsx) | Retained query-result files. |
-| [Untitled.csv](Untitled.csv) | A small exploratory data fragment. |
+| [RICdata.csv](RICdata.csv) | Original RIC export: 247 records and 10 columns. |
+| [RICdata_from_xlsx.csv](RICdata_from_xlsx.csv) | Verified workbook export: two records and 10 columns. |
+| [Results.csv](Results.csv) | Original query-result export: 79 records and four columns. |
+| [Results_from_xlsx.csv](Results_from_xlsx.csv) | Verified workbook export: 852 records and 74 columns, preserving headers, blanks, leading-zero identifiers, significant whitespace, and large integer values. |
 
-The compressed CSV is retained to preserve the original material. Both it and the expanded CSV are provided explicitly; their contents are duplicates.
+The original `RICdata.csv` and `Results.csv` contain different datasets from the corresponding `_from_xlsx.csv` exports. Both versions are retained. The two Excel workbooks were removed after all populated cells were compared with their exports; their date cells are represented as `yyyy-mm-dd` text in CSV.
+
+The Numbers document was removed after all 393,210 table cells matched `master_file_sorted_by_ticker.csv` and its hyperlinks were preserved separately. In the links CSV, `csv_row` is one based and includes the main CSV header; `column_number` is also one based. The 107 links use 34 distinct original URL targets.
+
+When opening these CSVs in spreadsheet software, import identifier and ticker columns as text to preserve leading zeros and literal codes. The compressed master CSV remains alongside the expanded CSV; their contents are duplicates.
 
 ## Database requirements
 
 Most examples expect an existing SQL Server provider database with the corresponding tables and views, including security-master/mapping objects and Datastream, Worldscope, and related provider datasets. Database access, credentials, and the full provider schema are not supplied here.
 
-Open and review each example before running it in a suitably configured SQL client. The scripts contain historical filters and exploratory fragments; for example, `SQLQuery_2.sql` includes `SELECT VERSION()`, which needs adjustment for SQL Server. `10_Update_Tables.sql` reads change-log tables; its title does not imply that it updates rows.
+Open and review each example before running it in a suitably configured SQL client. The scripts contain historical filters and exploratory fragments; for example, `SQLQuery_v2.sql` includes `SELECT VERSION()`, which needs adjustment for SQL Server. `10_Update_Tables.sql` reads change-log tables; its title does not imply that it updates rows.
 
 The SQL files use UTF-8 for browsing. `5_DS2_Pricing.sql` was converted from UTF-16 little-endian while preserving its decoded query text; the other files retain their original encoding and line endings.
 
 ## Publication notes
 
-These files replace the former training ZIP so that the examples can be reviewed individually. Historical author fields in nine SQL maintenance comments use neutral contributor labels. The five CSV files, two Excel workbooks, Apple Numbers document, and compressed CSV are retained byte-for-byte after inspection. Financial issuer names, ticker symbols, provider identifiers, data values, and vendor attribution remain because they are part of the examples.
+These files replace the former training ZIP so that the examples can be reviewed individually. Historical author fields in nine SQL maintenance comments use neutral contributor labels. The supporting data now consists of eight CSV files and one compressed CSV. Financial issuer names, ticker symbols, provider identifiers, data values, and vendor attribution remain because they are part of the examples.
 
 The examples were inspected without connecting to a live database. Unpacking and metadata cleanup do not establish that every historical query runs unchanged against a current provider schema.
