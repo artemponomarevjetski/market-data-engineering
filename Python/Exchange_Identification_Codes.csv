@@ -1,0 +1,264 @@
+Exchange ID,Mnemonic,Exchange Name,Country/Region
+.A,AOE,Nyse Amex (Options),United States
+.A,ASE,Nyse Amex (Equities),United States
+.AD,ABD,Abu Dhabi Securities Exch,United Arab Emirates
+.ALP,ALP,Alpha Trading Systems (Toronto),Canada
+.ALV,ALV,Alpha Trading Systems (Ventures),Canada
+.AM,AMM,Amman SE,Jordan
+.APX,APX,APX,Netherlands
+.AS,AMS/AEX,Euronext Amsterdam,Netherlands
+.AT,ATH/ADE,Athens SE/Derivative SE,Greece
+.AX,ASX,Australian SE,Australia
+.b,BFX,Brussels Deriv Exchange,Belgium
+.B,BOS,Boston SE,United States
+.BA,BUE,Buenos Aires SE,Argentina
+.BB,BLG,Bulgarian SE,Bulgaria
+.BC,BAR,Barcelona SE,Spain
+=BCS,BCS,Belarus Currency and SE,Belarus
+.BD,BUR,Burgundy MTF,Nordic Region
+.BE,BER,Berlin SE,Germany
+.BEL,BEL,Belgrade Stock Exchange,Serbia
+.BFC,TLX,Baltic Fund Market,Estonia/Latvia/Lithuania
+.BG,COL,Colombia Stock Exchange,Colombia
+.BH,BAH,Bahrain SE,Bahrain
+.BI,BIL,Bilbao SE,Spain
+.BJ,BNL,Banja Luka SE,Bosnia and Herzegovina
+.BK,SET,Thailand SE,Thailand
+.BN,BRN,Berne SE,Switzerland
+.BO,BSE,Bombay SE,India
+.BR,BRU,Euronext Brussels,Belgium
+.BRQ,BUH,RASDAQ Listed/RSQ Traded,Romania
+.BS,BTE,BATS Europe,United Kingdom
+.BSX,BSX,Bermuda Stock Exchange,Bermuda
+.BT,BSM,Botswana SE,Botswana
+.BU,BUD,Budapest SE,Hungary
+,HPX,Hungarian Power Exchange,Hungary
+.BV,BRA,Bratislava SE,Slovakia
+.BX,BUH,Bucharest SE,Romania
+.BY,BDB,Beirut SE,Lebanon
+.C,CIN,Cincinnati SE,United States
+.C,LCC,National SE,United States
+.CA,CAI,Egyptian SE,Egypt
+.CD,CNQ,CNSX-Canadian National SE,Canada
+.CE,BEC,Electronic Exchange,Chile
+.CH,CISX,Channel Islands SE,United Kingdom
+.CHI,INS,CHI-X Europe,United Kingdom
+.CHIp,INS,Chix Mifid,United Kingdom
+.CI,ABJ,BRVM,Ivory Coast
+.CJ,CRI,COSTA RICA SE,Costa Rica
+.CJ1,CHT,Chittagong SE,Bangladesh
+.CL,CAL,Calcutta SE,India
+.CM,CSE,Colombo SE,Sri Lanka
+.CN,COL,Colombia SE,Colombia
+.CO,CPH,Copenhagen SE,Denmark
+.CR,CCS,Caracas SE,Venezuela
+.CS,CAS,Casablanca SE,Morocco
+.CT,CT1,Ceto OTC Regulated Market,Poland
+.CXC,CXC,CHI-X Canada,Canada
+.CY,CYS,Cyprus SE,Cyprus
+.D,DUS,RWB,Germany
+.DE,GER,Xetra,Germany
+.DF,ADF,NASDAQ ADF,United States
+.DH,DSE,Dhaka Stock Exchange,Bangladesh
+.DI,DIX,Nasdaq Dubai(ex-DIFX),UAE
+.DL,DES,Delhi Stock Exchange,India
+=DM,MTS,MTSGermany,Germany
+=DN,MTS,MTSDenmark,Denmark
+=DP,BAR,Barcelona SE,Spain
+.DU,DBX,Dubai Financial Market,UAE
+.E,EOE/AEX,AEX-Options & Futures,Netherlands
+.EA,EDX,European Derivative Exchange,United Kingdom
+=EC,MTE,EuroCredit MTS,Italy
+.ED,EQD,Equiduct,United Kingdom
+=EM,MTE,EuroMTS,Italy
+.ES,FDI,Spainish Investment Funds,Spain
+=ES,MTS,MTSSpain,Spain
+.EW,EWX,Euwax,Germany
+.EX,EUX,Eurex Deutschland,Germany
+.EX,EUX,Eurex Switzerland,Switzerland
+.F,FRA,Frankfurt SE,Germany
+=FL,MTS,MTSFinland,Finland
+=FN,MRF,SENAF,Spain
+.FU,FKA,Fukuoka SE,Japan
+.FX,TFX,Thailand Futures,Thailand
+.GG,BKG,Bank of Greece,Greece
+=GK,MTF,MTSGreece,Greece
+.GH,GSE,Ghana SE,Ghana
+.GO,PTX,Pure Trading,Canada
+.GQ,GYQ,Bolsa de Guayaquil,Ecuador
+.H,HAM,Hamburg SE,Germany
+.HA,HAN,Hanover SE,Germany
+.HE,HEX,Helsinki SE,Finland
+.HF,HFE,Hong Kong Futures Exchange,Hong Kong
+.HFT,HFT,NYSE ARCA,Europe
+.HK,HKG,Hong Kong SE,Hong Kong
+.HM,VSE,Hochiminh SE,Vietnam
+.HN,HAS,Hanoi Stock Exchange,Vietnam
+.HNO,UPC,Unlisted Public Company Market,Vietnam
+.I,ISE,Irish SE,Ireland
+.IC,ICX,Iceland SE,Iceland
+=ID,MTS,MTSIreland,Ireland
+.II,ISS,Intl Sec Exch - Equities,United States
+.Ip,ISE,Irish Mifid,Ireland
+.IS,IST/TDE,Istanbul SE,Turkey
+,IST,Istanbul Gold Exchange,Turkey
+,TDE,Turkish Derivatives Exchange,Turkey
+.IXH,IXH,Instinet HK,Hong Kong
+.J,JNB/SFX,Johannesburg SE/Safex,South Africa
+.JK,JKT,Indonesia SE (formerly JSX),Indonesia
+,JFX,Jakarta Futures Exchange,Indonesia
+.K,NYQ,NYSE Consolidated,United States
+.K,ASQ,NYSE Amex Consolidated,United States
+.KA,KAR,Karachi SE,Pakistan
+.KE,KFE,KOFEX,South Korea
+.KE,KFE,KOFEX - KODAQ 50,South Korea
+.KF,MDX,Bursa Msia Derivatives Ex,Malaysia
+.KL,KLS,Bursa Msia Securities Ex,Malaysia
+.KQ,KOE,KOSDAQ,South Korea
+.KS,KSC,Korea SE (Koscom),South Korea
+.KW,KUW,Kuwait SE,Kuwait
+.KY,KYO,Kyoto SE,Japan
+.KZ,KAZ,Kazakhstan Stock Exchange,Kazakhstan
+.L,LSE,London SE,United Kingdom
+.L,LIF,LIFFE,United Kingdom
+.LA,LAT,Latino American Market,Spain
+.LG,LAG,Nigeria Stock Exchange,Nigeria
+.LJ,LJU,Ljubljana SE,Slovenia
+.LM,LMA,Lima SE,Peru
+.LN,LNM,Le Nouveau Marche,France
+.LP,LIP,Lipper,Global
+.LS,LIS,Euronext Lisbon,Portugal
+.LT,LSE,London Latest Touch system,Britain
+.LU,LUX,Luxembourg SE,Luxembourg
+.LUF,RCT,Luxembourg Domiciled Funds,Luxembourg
+.LZ,LUS,Lusaka Stock Exchange,Zambia
+.M,MON,Montreal Exchange,Canada
+.MA,MAD,Madrid SE,Spain
+=MB,BNC,Bank Negara Msia,Malaysia
+.MC,MCE,Mercado Continuo,Spain
+=MCX,MCX,MICEX (Currency data),Russia
+=ME,MAE,M.A.E,Argentina
+=MF,MFI,Madrid SE Fixed Income,Spain
+=MH,MST,MTS Portugal,Portugal
+.MI,MIL,Milan SE,Italy
+=MJ,MTA,MTSAmsterdam,Netherlands
+=MK,MTC,MTSBelgium,Belgium
+.MKE,MKE,Macedonia Stock Exchange,Macedonia
+.MM,MCX,MICEX,Russia
+.MN,MTV,Montevideo Stock Exchange,Uruguay
+.MO,MSE,Moscow SE,Russia
+.MOT,MOT,Montenegro SE,Montenegro
+.MT,MLT,Malta SE,Malta
+.MU,MUN,Munich SE,Germany
+.MV,MLS,Malawi SE,Malawi
+=MV,MRF,AIAF,Spain
+.MW,MID,Chicago SE,United States
+.MX,MEX,Mexico SE,Mexico
+=MY,MTF,MTSFrance,France
+.MZ,MAU,Mauritius SE,Mauritius
+.MZA,MEN,Mendoza Stock Exchange,Argentina
+.N,NYS,New York SE,United States
+.NFF,NFF,Norwegian Fund Broker Asstn,Norway
+.NG,NGO,Nagoya SE,Japan
+.NGM,NGM,Nordic Growth Market,Sweden
+.NH,NSX,National SE for Australia,Australia
+.NL,BUH,Romanian Equities TNL,Romania
+.NM,NSE,Namibian SE,Namibia
+.NP,NWX,Nordpool Energy Exch Options,Norway
+.NR,NAI,Nairobi SE,Kenya
+.NS,NSI,National SE,India
+.NZ,NZE,New Zealand SE,New Zealand
+.O,NSQ,Nasdaq Consolidated,United States
+.OB,OBB,OTC Bulletin Board,United States
+.OJ,OSA,Hercules Nippon,Japan
+.OL,OSL,Oslo SE,Norway
+.OM,MUS,Muscat Sercuities Market,Oman
+.OQ,NSM,NASDAQ Stock Market,United States
+.OS,OSA,Osaka SE,Japan
+.p,PAR,MONEP,France
+.P,PAO,Pacific Options,United States
+.P,PSE,NYSE Arca,United States
+.P,LCP,Pacific Exchange/ARCA,United States
+.PA,PAR,Euronext Paris,France
+.PC,SPC,Saint-Petersburg Currency,Russia
+.PD,EDP,Primary Dealers Bond Market,Egypt
+.PE,SPS,Saint-Petersburg,Russia
+=PEX,PEX,Portuguese Private Exchange,Portugal
+.PFT,PFT,PFTS Stock Exchange,Ukraine
+.PK,PNK,Other-OTC (Pinksheets),United States
+.PL,PLS,Palestinian Securities Exch,Palestinian Auth
+.PR,PRA,Prague SE,Czech
+,PXE,Power Exchange Central Europe,Czech
+.PS,PHS,Philippine SE,Philippines
+=PW,MTS,MTSPoland,Poland
+.K,PCQ,NYSE Arca Consolidated,United States
+.PZ,PLU,PLUS Markets Group Plc,United Kingdom
+.Q,JSD,JASDAQ SE,Japan
+.QA,DSM,Qatar Exchange,Qatar
+=QI,MTE,MTS Quasi-Government Market,Italy
+.QMF,QMF,Quote MTF Ltd,Hungary
+.QU,QTO,BOLSA DE QUITO,Ecuador
+=RC,BUE,Buenos Aires Cont,Argentina
+.RCT,,Reuters Contributed Exchange Code,NA
+.RF,RFX,Rosario Futures Exchange,Argentina
+.RI,RIX,Riga Stock Exchange,Latvia
+=RN,MTX,MTS Reference Pricing,Italy
+.RTS,RTS,Russian Trading System,Russia
+.S,SWX,SIX Swiss Exchange,Switzerland
+.SA,SAO,Sao Paulo SE,Brazil
+.SE,SAU,Saudi SE,Saudi Arabia
+.SF,SFE,Sydney Futures Exch,Australia/New Zealand
+.SG,STU,Stuttgart SE,Germany
+.SHBK,BQT,Be Quoted,Sweden
+.SI,SES,SGX-ST,Singapore
+.SJ,SJR,Sarajevo SE,Bosnia & Herzegovina
+.SN,SGO,Santiago SE,Chile
+.SO,SOMA,SOMA,Brazil
+.SP,SAP,Sapporo SE,Japan
+.SS,SHH,Shanghai SE,China
+.ST,STO,Stockholm Stock Exchange,Sweden
+.ST,STO,Stockholm Options,Sweden
+=SU,SUB,Indonesia SE (formerly SSX),Indonesia
+.SZ,SHZ,Shenzhen SE,China
+.T,TYO,Tokyo SE,Japan
+.TA,TLV,Tel Aviv SE,Israel
+=TA,TLV,Tel Aviv SE (Bonds),Israel
+=TC,CBC,CBC,Taiwan
+.TE,TEJ,Taiwan Economic Journal,Taiwan
+.TH,THM,Third Market Stock,United States
+.TI,ETX,Euro TLX,Italy
+=TI,ETX,Euro TLX,Italy
+.TL,TLX,Tallinn SE,Estonia
+.TM,TIM,Taiwan Futures Exchange,Taiwan
+.TN,TUN,Tunis SE,Tunisia
+.TO,TOR,Toronto SE,Canada
+.TQ,TRQ,TURQUOISE,United Kingdom
+=TT,MTS,MTS ITALY,Italy
+=TV,MTT,MTSIsrael,Israel
+.TW,TAI,Taiwan SE,Taiwan
+.TWO,TWO,ROC OTC SE,Taiwan
+.TX,ETX,Euro TLX,Italy
+=TX,ETX,Euro TLX,Italy
+.TZ,DSS,Dar Es Salaam SE Ltd,Tanzania
+.U,OPQ,OPRA NBBO Options,United States
+.UAX,UAX,Ukrainian Exchange,Ukraine
+.UE,UEX,Uruguyan Electronic Exchange,Uruguay
+.UP,UKPX,UK Power Exchange,United Kingdom
+.v,OTB,OETOB,Austria
+.V,CVE,TSX Venture,Canada
+.V,NEX,TSX Venture-NEX,Canada
+.VA,VLN,Valencia SE,Spain
+.VI,VIE,Vienna SE,Austria
+.VL,VLX,Vilnus SE,Lithuania
+=VM,MTS,MTSAustria,Austria
+.VX,VTX,"Swiss Blue Chip Segment, (formerly SWX)",Switzerland
+.W,WCB,Chicago Options,United States
+.WA,WSE,Warsaw SE,Poland
+,WPG,ICE Futures Canada,Canada
+.X,PHO,Philadelphia Options,United States
+.XR,XIM,Xetra International Market,Germany
+,EEX,European Energy Exchange,Germany
+.Y,ISO,International Securities,United States
+.Z,LCZ,BATS trading For Nasdaq (OMX Global Mkt),United States
+.ZA,ZAG,Zagreb SE,Croatia
+.ZI,ZSE,Zimbabwe Stock Exchange,Zimbabwe
