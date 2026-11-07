@@ -15,6 +15,12 @@ The implementation centers on **Python CSV processing, T-SQL, and SQL Server acc
 | [containerized_corporate_events/](containerized_corporate_events/) | Corporate-action extraction, snapshot comparison, and the original Docker recipe | [corporate_events.py](containerized_corporate_events/corporate_events.py) |
 | [sql/](sql/) | Corporate-action calculations and provider-query training examples | [sql_with_computation.sql](sql/sql_with_computation.sql) |
 | [sql/qad_training/](sql/qad_training/) | SQL training examples, security-master experiments, and supporting datasets | [Training index](sql/qad_training/README.md) |
+| [hedge_fund_proposal/](hedge_fund_proposal/) | Art's hedge-fund proposal index and related research records; original proposal text pending | [Proposal index](hedge_fund_proposal/README.md) |
+| [2010_christina_winch_consulting/](2010_christina_winch_consulting/) | Reconstructed 2010 Schwab ETF and MACD research context | [Study guide and PDF](2010_christina_winch_consulting/README.md) |
+| [mark_scheffler_hedge_fund_proposal/](mark_scheffler_hedge_fund_proposal/) | Record of Art's hedge-fund proposal presentation to Mark Scheffler | [Presentation record](mark_scheffler_hedge_fund_proposal/README.md) |
+| [george_sokoloff_collaboration/](george_sokoloff_collaboration/) | Python research on strange attractors and heavy-tailed Cauchy distributions, plus agentic AI for commerce | [Collaboration record](george_sokoloff_collaboration/README.md) |
+
+For consulting services, see the [Financial AI consulting one-pager](Art_Ponomarev_Financial_AI_Consulting_One_Pager.md).
 
 ## What the code covers
 
