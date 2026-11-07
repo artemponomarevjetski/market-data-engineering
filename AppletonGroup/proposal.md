@@ -36,8 +36,8 @@ According to Art's recollection, Mark also discussed **Moving Average Convergenc
 
 ## Proposal materials
 
-The original proposal is not included in the materials currently available for this repository. This README records the presentation; the original proposal text and slides can be added here if recovered.
+The original historical investment proposal is not included in the materials currently available for this repository. This document records the presentation; the original proposal text and slides can be added here if recovered.
 
-For Art's current consulting services, see the [Financial AI consulting one-pager](../Art_Ponomarev_Financial_AI_Consulting_One_Pager.md).
+For Art's current consulting services, see the [Financial AI consulting proposal](../hedge_fund_proposal/proposal.md).
 
-[Hedge-fund proposal index](../hedge_fund_proposal/README.md) | [Return to the repository overview](../README.md)
+[Return to the repository overview](../README.md)
