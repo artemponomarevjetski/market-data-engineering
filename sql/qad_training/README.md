@@ -2,6 +2,14 @@
 
 This directory contains the unpacked QAD training material: **39 SQL files and eight supporting data files**. The examples explore provider security identifiers, historical mappings, price series, corporate actions, and security-master reconciliation.
 
+## What QA and QAD mean
+
+**QA means Quantitative Analytics** in this financial-data context. **[QA Direct](https://www.lseg.com/en/media-centre/press-releases/refinitiv/2018/november/refinitiv-launches-quantitative-analytics-platform-qa-direct-in-the-cloud-with-microsoft-azure)** is the legacy Thomson Reuters/Refinitiv platform for accessing financial datasets in a standardized database. The folder name `qad_training` retains that historical QA Direct shorthand. LSEG now markets the offering as **[Quantitative Analytics Database (QAD)](https://www.lseg.com/en/data-analytics/products/lseg-quantitative-analytics)**.
+
+The platform connects security identifiers, market prices, corporate actions, and company data through shared mappings. For example, the SQL here joins security-master records to Datastream prices and Worldscope fundamentals. The examples target Microsoft SQL Server tables and views such as `SECMSTRX`, `SECMAPX`, and `vw_Ds2Pricing`.
+
+Running these queries requires an existing provider database, the relevant licensed datasets, and permission to access them. This repository supplies historical query examples and selected CSV exports. The provider's full database, schema, credentials, and content entitlements must come from your own authorized environment.
+
 ## Browse the queries
 
 | Files | Purpose |
@@ -26,7 +34,7 @@ The numbered master-table variants are independent working versions. They are re
 | [master_file.csv](master_file.csv) | Security-master data; identical to the existing [python/master_file.csv](../../python/master_file.csv). |
 | [master_file_sorted_by_ticker.csv](master_file_sorted_by_ticker.csv) | Complete master table from the former Numbers document: 65,534 records and six columns. |
 | [master_file_sorted_by_ticker_links.csv](master_file_sorted_by_ticker_links.csv) | All 107 embedded hyperlinks from the Numbers document, with the original link text and URL targets. |
-| [QA_Direct.csv](QA_Direct.csv) | Provider-query export. |
+| [QA_Direct.csv](QA_Direct.csv) | Security and ticker-reference export from QA Direct: 116,934 records and 10 columns (`ID`, `SECCODE`, `NAME`, `STARTDATE`, `ENDDATE`, `TICKER`, `TYPECODE`, `STATUSCODE`, `MIC`, `MICDESC`). Includes date intervals, type/status codes, and trading-venue codes and descriptions. |
 | [ric_history.csv](ric_history.csv) | RIC validity history for ten security IDs, with tickers, quote IDs, sequence numbers, and start/end dates and times: 247 records and 10 columns. Formerly `RICdata.csv`. |
 | [citigroup_datastream_name_history.csv](citigroup_datastream_name_history.csv) | Citigroup example linking security and vendor identifiers to historical Datastream quote names (`TRAVELERS GP.` and `CITIGROUP`) and validity dates: two records and 10 columns. Formerly `RICdata_from_xlsx.csv`. |
 | [datastream_quote_name_history.csv](datastream_quote_name_history.csv) | Datastream quote-name history for 22 `InfoCode` values: 79 records and four columns (`InfoCode`, `StartDate`, `EndDate`, `DSQtName`). Formerly `Results.csv`. |
