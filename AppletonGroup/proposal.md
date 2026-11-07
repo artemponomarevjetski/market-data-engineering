@@ -38,6 +38,6 @@ According to Art's recollection, Mark also discussed **Moving Average Convergenc
 
 The original historical investment proposal is not included in the materials currently available for this repository. This document records the presentation; the original proposal text and slides can be added here if recovered.
 
-For Art's current consulting services, see the [Financial AI consulting proposal](../hedge_fund_proposal/proposal.md).
+For Art's current consulting services, see the [Fintech consulting proposal](../fintech_consulting_proposal/proposal.md).
 
 [Return to the repository overview](../README.md)
