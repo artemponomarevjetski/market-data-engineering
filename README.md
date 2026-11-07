@@ -15,12 +15,12 @@ The implementation centers on **Python CSV processing, T-SQL, and SQL Server acc
 | [containerized_corporate_events/](containerized_corporate_events/) | Corporate-action extraction, snapshot comparison, and the original Docker recipe | [corporate_events.py](containerized_corporate_events/corporate_events.py) |
 | [sql/](sql/) | Corporate-action calculations and provider-query training examples | [sql_with_computation.sql](sql/sql_with_computation.sql) |
 | [sql/qad_training/](sql/qad_training/) | SQL training examples, security-master experiments, and supporting datasets | [Training index](sql/qad_training/README.md) |
-| [hedge_fund_proposal/](hedge_fund_proposal/) | Art's Financial AI consulting proposal, service scopes, deliverables and engagement options | [Proposal (Markdown)](hedge_fund_proposal/proposal.md) · [PDF](hedge_fund_proposal/proposal.pdf) |
+| [fintech_consulting_proposal/](fintech_consulting_proposal/) | Agentic AI classifier for company activities and themes using SEC filings, with evidence, evaluation and pilot deliverables | [Proposal (Markdown)](fintech_consulting_proposal/proposal.md) · [PDF](fintech_consulting_proposal/proposal.pdf) |
 | [MondayFund/](MondayFund/) | Reconstructed 2010 Schwab ETF and MACD research context | [Study guide and PDF](MondayFund/README.md) |
 | [AppletonGroup/](AppletonGroup/) | Record of Art's hedge-fund proposal presentation to Mark Scheffler | [Presentation record](AppletonGroup/proposal.md) · [PDF](AppletonGroup/proposal.pdf) |
 | [CarmotCapital/](CarmotCapital/) | Dated 2020 signal-recovery problem and new Python demonstrations for Cauchy noise and strange-attractor forecasting | [Collaboration record](CarmotCapital/README.md) |
 
-For consulting services, see the [Financial AI consulting proposal](hedge_fund_proposal/proposal.md).
+For consulting services, see the [Fintech consulting proposal](fintech_consulting_proposal/proposal.md).
 
 ## What the code covers
 
