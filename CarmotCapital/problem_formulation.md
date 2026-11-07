@@ -18,10 +18,10 @@ or completed historical performance result is supplied here.
 
 For known sample times $t_n$, define
 
-$
+$$
 S_{k,n}=\cos(b_k t_n+c_k),\qquad
 Y=D^\mathsf{T}S+E,
-$
+$$
 
 where:
 
@@ -90,9 +90,9 @@ setting, not a universal mathematical resolution boundary.
 
 For a residual $r$ and fixed robust scale $s$, the regression loss is
 
-$
+$$
 \rho(r)=\log\!\left(1+(r/s)^2\right).
-$
+$$
 
 [SciPy documents this Cauchy-loss form and its optimization difficulties](https://docs.scipy.org/doc/scipy/reference/generated/scipy.optimize.least_squares.html).
 The code implements its reweighted linear fits directly and uses
