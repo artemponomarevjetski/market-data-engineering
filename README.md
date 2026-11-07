@@ -12,7 +12,7 @@ The implementation centers on **Python CSV processing, T-SQL, and SQL Server acc
 |---|---|---|
 | [Python/](Python/) | Dated ETL and corporate-event implementations, comparison variants, and supporting artifacts | [2020-02-03.py](Python/2020-02-03.py) |
 | [python-sql-data-external-data-providers/](python-sql-data-external-data-providers/) | Provider ETL and a CTA Plan alert-monitoring example | [etl_code_python_sql.py](python-sql-data-external-data-providers/etl_code_python_sql.py) |
-| [examples/containerized_corporate_events/](examples/containerized_corporate_events/) | Corporate-action extraction, snapshot comparison, and the original Docker recipe | [corporate_events.py](examples/containerized_corporate_events/corporate_events.py) |
+| [containerized_corporate_events/](containerized_corporate_events/) | Corporate-action extraction, snapshot comparison, and the original Docker recipe | [corporate_events.py](containerized_corporate_events/corporate_events.py) |
 | [sql/](sql/) | Corporate-action calculations and provider-query training examples | [sql_with_computation.sql](sql/sql_with_computation.sql) |
 | [sql/qad_training/](sql/qad_training/) | SQL training examples, security-master experiments, and supporting datasets | [Training index](sql/qad_training/README.md) |
 
@@ -36,7 +36,7 @@ The price-export code includes an **unadjusted close** field; review its adjustm
 
 ### 2. Corporate-action extraction
 
-[corporate_events.py](examples/containerized_corporate_events/corporate_events.py) joins provider security, mapping, capital-event, reference, quote, and price tables. It extracts company and ticker information, action descriptions, event dates, exchange terms, cash consideration, and a selected close price.
+[corporate_events.py](containerized_corporate_events/corporate_events.py) joins provider security, mapping, capital-event, reference, quote, and price tables. It extracts company and ticker information, action descriptions, event dates, exchange terms, cash consideration, and a selected close price.
 
 The query also calculates outcomes for a hypothetical holding of **100 shares**: resulting whole shares, fractional shares, cash in lieu, and total cash.
 
@@ -49,7 +49,7 @@ The `--source-date` argument controls the lower bound on event effective dates. 
 
 ### 3. Comparison of dated CSV snapshots
 
-[diff_between_timestamped_records.py](examples/containerized_corporate_events/diff_between_timestamped_records.py) reads snapshots whose filenames end in `_YYYY_MM_DD.csv` and compares their row contents across dates. It excludes the final close-price field from the comparison.
+[diff_between_timestamped_records.py](containerized_corporate_events/diff_between_timestamped_records.py) reads snapshots whose filenames end in `_YYYY_MM_DD.csv` and compares their row contents across dates. It excludes the final close-price field from the comparison.
 
 Its output is `corporate_events_timestamped_diff_YYYY_MM_DD.csv`, written to the **parent of the input directory**. Place the input snapshots directly in the selected directory. Related historical comparison implementations are retained in [Python/](Python/).
 
@@ -61,19 +61,19 @@ Before execution in a SQL Server client, replace the `xxx, yyy` security-code pl
 
 ### 5. SQL training and security-master experiments
 
-[sql/qad_training/](sql/qad_training/) makes the training material directly browsable. It contains 39 SQL files covering identifiers, vendor mappings, identifier histories, pricing, dividends, capital events, provider views, and security-master reconciliation, plus nine supporting data files.
+[sql/qad_training/](sql/qad_training/) makes the training material directly browsable. It contains 39 SQL files covering identifiers, vendor mappings, identifier histories, pricing, dividends, capital events, provider views, and security-master reconciliation, plus supporting reference data and query exports.
 
 The [training index](sql/qad_training/README.md) groups the examples and describes the provider-database requirements. These exploratory scripts are independent examples; they do not provision the provider schema or form a sequential application pipeline.
 
 ### 6. Docker packaging example
 
-The [Dockerfile](examples/containerized_corporate_events/Dockerfile) records the original approach to packaging Python with SQL Server ODBC dependencies, including `msodbcsql17` and `unixodbc-dev`.
+The [Dockerfile](containerized_corporate_events/Dockerfile) records the original approach to packaging Python with SQL Server ODBC dependencies, including `msodbcsql17` and `unixodbc-dev`.
 
-This is a **historical recipe that needs updating before use**. It uses `python:3.8-buster` and Debian 10 installation steps, refers to a `requirements.txt` that is absent from the repository, and defines no default application command. The [sample invocation notes](examples/containerized_corporate_events/sample-invocation.txt) also contain old local paths and references to an absent `test.py` entry point.
+This is a **historical recipe that needs updating before use**. It uses `python:3.8-buster` and Debian 10 installation steps, refers to a `requirements.txt` that is absent from the repository, and defines no default application command. The [sample invocation notes](containerized_corporate_events/sample-invocation.md) also contain old local paths and references to an absent `test.py` entry point.
 
 ### 7. Browser-based operations monitoring
 
-[scraping_web_page_with_heavy_java_script.py](python-sql-data-external-data-providers/scraping_web_page_with_heavy_java_script.py) is a separate example of monitoring the **CTA Plan alerts page**. It uses Selenium with Firefox to obtain browser-rendered content, lxml to inspect it, and email code to send alerts.
+[sec_schedule_d_monitoring.py](python-sql-data-external-data-providers/sec_schedule_d_monitoring.py) currently monitors the **CTA Plan alerts page**. It uses Selenium with Firefox to obtain browser-rendered content, lxml to inspect it, and email code to send alerts. SEC filing retrieval is not implemented.
 
 The script starts its browser and polling loop at module level. Review the browser APIs, recipients, configuration, and notification behavior before running or importing it.
 
@@ -86,8 +86,8 @@ Clone the consolidated repository:
 
 Start by inspecting a component and its arguments. These help commands exit before database access, snapshot processing, or output generation:
 
-    python3 examples/containerized_corporate_events/corporate_events.py --help
-    python3 examples/containerized_corporate_events/diff_between_timestamped_records.py --help
+    python3 containerized_corporate_events/corporate_events.py --help
+    python3 containerized_corporate_events/diff_between_timestamped_records.py --help
 
 | Component | Arguments |
 |---|---|
@@ -151,7 +151,7 @@ These are historical implementations and reference examples. Live database execu
 
 [Python/](Python/) preserves dated scripts from December 2019 through February 2020, corporate-event and comparison variants, and other working versions. Files named `test_corporate_events.py`, `test_v1.py`, and `test_v2.py` are historical scripts or working copies.
 
-Supporting material includes the exchange-code workbook, a master CSV, and the unpacked [SQL training examples and data](sql/qad_training/). The training ZIP has been replaced by its individual files, and the bundled legacy ODBC library has been removed. Historical author fields in the unpacked SQL maintenance comments use neutral labels. Financial records, executable query text, public author credit, and vendor attribution are retained. The supporting spreadsheets were inspected and retained without changing their data.
+Supporting material includes the [exchange-code CSV](Python/Exchange_Identification_Codes.csv) and [original workbook](Python/Exchange%20Identification%20Codes.xlsx), a master CSV, and the unpacked [SQL training examples and data](sql/qad_training/). The training ZIP has been replaced by its individual files, and the bundled legacy ODBC library has been removed. Historical author fields in the unpacked SQL maintenance comments use neutral labels. Financial records, executable query text, public author credit, and vendor attribution are retained. CSV companions are available for the populated Excel worksheets. The original workbooks are retained alongside their exports.
 
 ## Consolidation
 
@@ -160,7 +160,7 @@ This repository combines:
 | Component | Current location |
 |---|---|
 | Market-data processing | `Python/` and `python-sql-data-external-data-providers/` |
-| Containerized corporate-event examples | `examples/containerized_corporate_events/` |
+| Containerized corporate-event examples | `containerized_corporate_events/` |
 | Standalone SQL calculations and training examples | `sql/` and `sql/qad_training/` |
 
 This root README describes the inspected combined code.
