@@ -2,7 +2,7 @@
 
 Python examples for extracting corporate-action records from a provider database, calculating hypothetical share and cash outcomes, and comparing dated CSV snapshots. The directory also preserves a historical Docker packaging recipe.
 
-The extractor produces corporate-action reports. Security-master reconciliation and the wider ETL workflow are documented in the [repository README](../../README.md).
+The extractor produces corporate-action reports. Security-master reconciliation and the wider ETL workflow are documented in the [repository README](../README.md).
 
 ## Files
 
@@ -11,7 +11,7 @@ The extractor produces corporate-action reports. Security-master reconciliation 
 | [corporate_events.py](corporate_events.py) | Query SQL Server through ODBC and write a dated corporate-action CSV. |
 | [diff_between_timestamped_records.py](diff_between_timestamped_records.py) | Compare the contents of dated snapshots, excluding their final close-price column. |
 | [Dockerfile](Dockerfile) | Historical Python/ODBC container recipe that requires adaptation. |
-| [sample-invocation.txt](sample-invocation.txt) | Original command notes, including paths and entry points that do not apply to the current directory. |
+| [sample-invocation.md](sample-invocation.md) | Original command notes, including paths and entry points that do not apply to the current directory. |
 
 ## Requirements and database configuration
 
@@ -41,15 +41,15 @@ The script reads exported variables; it does not load a `.env` file. Keep creden
 Commands below run from the repository root. Inspect the arguments first:
 
 ```bash
-python3 examples/containerized_corporate_events/corporate_events.py --help
-python3 examples/containerized_corporate_events/diff_between_timestamped_records.py --help
+python3 containerized_corporate_events/corporate_events.py --help
+python3 containerized_corporate_events/diff_between_timestamped_records.py --help
 ```
 
 After configuring the connection, create an output directory and specify an explicit source date:
 
 ```bash
 mkdir -p output/corporate-events/snapshots
-python3 examples/containerized_corporate_events/corporate_events.py \
+python3 containerized_corporate_events/corporate_events.py \
   --working-directory output/corporate-events/snapshots \
   --source-date 2019-01-01
 ```
@@ -85,7 +85,7 @@ Before running the comparison, review its large allocation: it creates **20,750,
 Use a flat directory containing only compatible, nonempty snapshots with a header and the extractor's column order. Keep one file per date, a consistent filename prefix, and zero-padded `_YYYY_MM_DD.csv` suffixes. Use at least two dates. Although file discovery walks subdirectories, opening files uses only their basenames in the selected directory.
 
 ```bash
-python3 examples/containerized_corporate_events/diff_between_timestamped_records.py \
+python3 containerized_corporate_events/diff_between_timestamped_records.py \
   --working-directory output/corporate-events/snapshots
 ```
 
@@ -99,4 +99,4 @@ The Dockerfile uses `python:3.8-buster`, Debian 10 package configuration, `msodb
 
 The invocation notes also reference an absent `test.py` and historical local paths. Use the actual entry points above when adapting the example.
 
-For related computations without Python, see the [SQL guide](../../sql/README.md). Its standalone query has different active filters. This documentation reflects source inspection; live database execution and Docker builds require separate validation.
+For related computations without Python, see the [SQL guide](../sql/README.md). Its standalone query has different active filters. This documentation reflects source inspection; live database execution and Docker builds require separate validation.
