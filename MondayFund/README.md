@@ -1,4 +1,4 @@
-# 2010 Christina Winch consulting: Schwab ETF and MACD research
+# MondayFund: 2010 consulting with Christina Winch
 
 **Reconstructed 7 Nov 2026**
 
@@ -67,7 +67,7 @@ Proposed outputs are an assumptions sheet, reproducible calculations, an executi
 
 [Christina Winch's LinkedIn profile](https://www.linkedin.com/in/christina-winch-6b776067/)
 
-[Return to the repository overview](../README.md) | [Financial AI consulting one-pager](../Art_Ponomarev_Financial_AI_Consulting_One_Pager.md)
+[Return to the repository overview](../README.md) | [Financial AI consulting proposal](../hedge_fund_proposal/proposal.md)
 
 [1]: https://www.sec.gov/Archives/edgar/data/1454889/000095012310045321/f55658nvcsrs.htm
 [2]: https://www.fidelity.com/learning-center/trading-investing/technical-analysis/technical-indicator-guide/macd
