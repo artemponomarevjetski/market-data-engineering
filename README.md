@@ -10,7 +10,7 @@ The implementation centers on **Python CSV processing, T-SQL, and SQL Server acc
 
 | Location | What it contains | Browse first |
 |---|---|---|
-| [Python/](Python/) | Dated ETL and corporate-event implementations, comparison variants, and supporting artifacts | [2020-02-03.py](Python/2020-02-03.py) |
+| [python/](python/) | Dated ETL and corporate-event implementations, comparison variants, and supporting artifacts | [2020-02-03.py](python/2020-02-03.py) |
 | [python-sql-data-external-data-providers/](python-sql-data-external-data-providers/) | Provider ETL and a CTA Plan alert-monitoring example | [etl_code_python_sql.py](python-sql-data-external-data-providers/etl_code_python_sql.py) |
 | [containerized_corporate_events/](containerized_corporate_events/) | Corporate-action extraction, snapshot comparison, and the original Docker recipe | [corporate_events.py](containerized_corporate_events/corporate_events.py) |
 | [sql/](sql/) | Corporate-action calculations and provider-query training examples | [sql_with_computation.sql](sql/sql_with_computation.sql) |
@@ -20,7 +20,7 @@ The implementation centers on **Python CSV processing, T-SQL, and SQL Server acc
 
 ### 1. Provider ETL and security-master reconciliation
 
-The [provider ETL](python-sql-data-external-data-providers/etl_code_python_sql.py) and the dated implementations in [Python/](Python/) address the relationship between provider security codes, ticker symbols, and their validity periods.
+The [provider ETL](python-sql-data-external-data-providers/etl_code_python_sql.py) and the dated implementations in [python/](python/) address the relationship between provider security codes, ticker symbols, and their validity periods.
 
 The ETL includes:
 
@@ -51,7 +51,7 @@ The `--source-date` argument controls the lower bound on event effective dates. 
 
 [diff_between_timestamped_records.py](containerized_corporate_events/diff_between_timestamped_records.py) reads snapshots whose filenames end in `_YYYY_MM_DD.csv` and compares their row contents across dates. It excludes the final close-price field from the comparison.
 
-Its output is `corporate_events_timestamped_diff_YYYY_MM_DD.csv`, written to the **parent of the input directory**. Place the input snapshots directly in the selected directory. Related historical comparison implementations are retained in [Python/](Python/).
+Its output is `corporate_events_timestamped_diff_YYYY_MM_DD.csv`, written to the **parent of the input directory**. Place the input snapshots directly in the selected directory. Related historical comparison implementations are retained in [python/](python/).
 
 ### 4. Computation inside SQL Server
 
@@ -149,9 +149,9 @@ These are historical implementations and reference examples. Live database execu
 
 ## Historical implementations and supporting material
 
-[Python/](Python/) preserves dated scripts from December 2019 through February 2020, corporate-event and comparison variants, and other working versions. Files named `test_corporate_events.py`, `test_v1.py`, and `test_v2.py` are historical scripts or working copies.
+[python/](python/) preserves dated scripts from December 2019 through February 2020, corporate-event and comparison variants, and other working versions. Files named `test_corporate_events.py`, `test_v1.py`, and `test_v2.py` are historical scripts or working copies.
 
-Supporting material includes the [exchange-code CSV](Python/Exchange_Identification_Codes.csv), a master CSV, and the unpacked [SQL training examples and data](sql/qad_training/). The training ZIP has been replaced by its individual files, and the bundled legacy ODBC library has been removed. Historical author fields in the unpacked SQL maintenance comments use neutral labels. Financial records, executable query text, public author credit, and vendor attribution are retained. Verified CSV exports preserve the populated Excel worksheet data, and the Excel originals were removed after comparison with their corresponding CSVs. The [supporting-data index](sql/qad_training/README.md#supporting-data) distinguishes the retained RIC history, Citigroup name history, Datastream quote-name history, and joined security-master datasets.
+Supporting material includes the [exchange-code CSV](python/Exchange_Identification_Codes.csv), a master CSV, and the unpacked [SQL training examples and data](sql/qad_training/). The training ZIP has been replaced by its individual files, and the bundled legacy ODBC library has been removed. Historical author fields in the unpacked SQL maintenance comments use neutral labels. Financial records, executable query text, public author credit, and vendor attribution are retained. Verified CSV exports preserve the populated Excel worksheet data, and the Excel originals were removed after comparison with their corresponding CSVs. The [supporting-data index](sql/qad_training/README.md#supporting-data) distinguishes the retained RIC history, Citigroup name history, Datastream quote-name history, and joined security-master datasets.
 
 ## Consolidation
 
@@ -159,7 +159,7 @@ This repository combines:
 
 | Component | Current location |
 |---|---|
-| Market-data processing | `Python/` and `python-sql-data-external-data-providers/` |
+| Market-data processing | `python/` and `python-sql-data-external-data-providers/` |
 | Containerized corporate-event examples | `containerized_corporate_events/` |
 | Standalone SQL calculations and training examples | `sql/` and `sql/qad_training/` |
 

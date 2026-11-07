@@ -23,7 +23,7 @@ The numbered master-table variants are independent working versions. They are re
 
 | Files | Description |
 |---|---|
-| [master_file.csv](master_file.csv) | Security-master data; identical to the existing [Python/master_file.csv](../../Python/master_file.csv). |
+| [master_file.csv](master_file.csv) | Security-master data; identical to the existing [python/master_file.csv](../../python/master_file.csv). |
 | [master_file_sorted_by_ticker.csv](master_file_sorted_by_ticker.csv) | Complete master table from the former Numbers document: 65,534 records and six columns. |
 | [master_file_sorted_by_ticker_links.csv](master_file_sorted_by_ticker_links.csv) | All 107 embedded hyperlinks from the Numbers document, with the original link text and URL targets. |
 | [QA_Direct.csv](QA_Direct.csv) | Provider-query export. |
