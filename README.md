@@ -149,9 +149,9 @@ These are historical implementations and reference examples. Live database execu
 
 ## Historical implementations and supporting material
 
-[Python/](Python/) preserves dated scripts from December 2019 through February 2020, corporate-event and comparison variants, and other working versions. Files named `test_corporate_events.py`, `test.py_bckp`, and `test.py_new` are historical scripts or working copies.
+[Python/](Python/) preserves dated scripts from December 2019 through February 2020, corporate-event and comparison variants, and other working versions. Files named `test_corporate_events.py`, `test_v1.py`, and `test_v2.py` are historical scripts or working copies.
 
-Supporting material includes the exchange-code workbook, a master CSV, a log, and the unpacked [SQL training examples and data](sql/qad_training/). The training ZIP has been replaced by its individual files, and the bundled legacy ODBC library has been removed. Historical author fields in the unpacked SQL maintenance comments use neutral labels. Financial records, executable query text, public author credit, and vendor attribution are retained. The supporting spreadsheets were inspected and retained without changing their data.
+Supporting material includes the exchange-code workbook, a master CSV, and the unpacked [SQL training examples and data](sql/qad_training/). The training ZIP has been replaced by its individual files, and the bundled legacy ODBC library has been removed. Historical author fields in the unpacked SQL maintenance comments use neutral labels. Financial records, executable query text, public author credit, and vendor attribution are retained. The supporting spreadsheets were inspected and retained without changing their data.
 
 ## Consolidation
 
