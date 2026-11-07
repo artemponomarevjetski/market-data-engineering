@@ -16,7 +16,7 @@ I help financial firms, hedge funds, and fintech teams turn data and research in
 
 **FORA Capital — Senior Data Scientist / Team Lead.** Integrated Refinitiv and Revere data, Python/SQL tools, and cloud-synchronized databases for backtesting and corporate-event arbitrage. Containerized workflows and collaborated with data scientists, DevOps, and brokers.
 
-**Winch Advisory Services — Quantitative consulting, Appleton, Wisconsin (2010).** Supported Christina Winch’s Monday investment strategy and U.S. ETF risk/timing research, with access to private records. The firm’s publicly documented investment strategies included the [Monday Portfolio](https://www.sec.gov/Archives/edgar/data/1314414/000091047211000504/coverpage.htm). An [illustrative ETF/MACD research reconstruction](2010_christina_winch_consulting/README.md), created in 2026, documents this consulting context.
+**Winch Advisory Services — Quantitative consulting, Appleton, Wisconsin (2010).** Supported Christina Winch’s Monday investment strategy and U.S. ETF risk/timing research, with access to private records. The firm’s publicly documented investment strategies included the [Monday Portfolio](https://www.sec.gov/Archives/edgar/data/1314414/000091047211000504/coverpage.htm). An [illustrative ETF/MACD research reconstruction](../2010_christina_winch_consulting/README.md), created in 2026, documents this consulting context.
 
 **Thesis Machine Learning — Head of Machine Learning (full-time, 2026).** Worked with Ben Feder on investment-focused ML, with responsibilities centered on model validation, technical leadership, and production readiness.
 
