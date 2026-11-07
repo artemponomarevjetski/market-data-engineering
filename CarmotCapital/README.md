@@ -96,4 +96,4 @@ A successful Lorenz demonstration does not establish that markets follow a low-d
 
 The forecasting code uses inverse-distance nearest-neighbor regression. These papers provide background; the script does not claim to reproduce their complete methods.
 
-[Repository overview](../README.md) | [Financial AI consulting proposal](../hedge_fund_proposal/proposal.md)
+[Repository overview](../README.md) | [Fintech consulting proposal](../fintech_consulting_proposal/proposal.md)
