@@ -59,7 +59,7 @@ Use a SQL Server-compatible SQL client connected to an existing provider databas
 | `RDCSecMapX`, `RDCQuoteInfo`, `RDCRICData` | Security, quote, ticker, and RIC relationships. |
 | `Ds2PrimqtPrc` | Closing-price records. |
 
-Database credentials and the complete provider schema are not supplied. The supporting CSVs and spreadsheets are historical exports; they do not recreate the database. Standalone SQL uses the connection configured in your SQL client. The `MSSQL_*` environment variables documented elsewhere configure the Python examples.
+Database credentials and the complete provider schema are not supplied. The [supporting CSVs](qad_training/README.md#supporting-data) are historical exports; they do not recreate the database. Standalone SQL uses the connection configured in your SQL client. The `MSSQL_*` environment variables documented elsewhere configure the Python examples.
 
 To adapt the corporate-action example:
 
