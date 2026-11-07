@@ -67,7 +67,7 @@ Proposed outputs are an assumptions sheet, reproducible calculations, an executi
 
 [Christina Winch's LinkedIn profile](https://www.linkedin.com/in/christina-winch-6b776067/)
 
-[Return to the repository overview](../README.md) | [Financial AI consulting proposal](../hedge_fund_proposal/proposal.md)
+[Return to the repository overview](../README.md) | [Fintech consulting proposal](../fintech_consulting_proposal/proposal.md)
 
 [1]: https://www.sec.gov/Archives/edgar/data/1454889/000095012310045321/f55658nvcsrs.htm
 [2]: https://www.fidelity.com/learning-center/trading-investing/technical-analysis/technical-indicator-guide/macd
