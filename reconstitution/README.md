@@ -1,8 +1,26 @@
-# PDF Evidence for Index Reconstitution
+# Python SEC Filing Parsing
 
-A runnable Python component for turning an annual-report PDF into traceable evidence for an index-research review. It verifies retained file hashes and filing correspondence, extracts page-level quotations, and keeps evidence availability and methodology eligibility as separate decisions.
+**Form 10-K and Form 20-F metadata/header parsing · Form 10-K PDF evidence extraction**
+
+Python tools for parsing locally retained SEC submissions JSON and original filing headers for **Forms 10-K and 20-F**, with a runnable **Form 10-K PDF evidence workflow** for index-reconstitution research. The package preserves filing identity, reporting periods, acceptance-time corroboration, source hashes, and exact quotation locations in extracted page text.
+
+The PDF workflow verifies retained file hashes and filing correspondence, extracts page-level quotations, and keeps evidence availability and methodology eligibility as separate decisions.
 
 This is a focused public adaptation of engineering work by **Artem (Art) Ponomarev**, with a new synthetic example and isolated tests. The included example uses fictitious company identifiers and generated documents. It demonstrates an evidence-processing component; it does not reconstruct an actual fund or produce investment recommendations.
+
+## Supported SEC documents
+
+| Capability | Form 10-K | Form 20-F |
+|---|---|---|
+| Parse retained SEC submissions JSON | Supported | Supported |
+| Parse and corroborate an original SEC filing header | Supported | Supported |
+| Check acceptance-time consistency and historical availability | Supported | Supported |
+| Verify PDF cover, filing identity, reporting period, section boundaries, and exact evidence locations | Supported by the focused PDF adapter | Not implemented; the verifier rejects this form |
+| Complete synthetic PDF demo and checked-in example result | Included | Not included |
+
+The metadata and header parsers are in [filings.py](src/index_reconstitution/filings.py). The form-specific PDF verifier is in [pdf.py](src/index_reconstitution/pdf.py). Generic PDF text extraction alone does not validate a Form 20-F document's structure or correspondence.
+
+Inputs are retained local documents. This package does not download EDGAR filings or parse SEC HTML/Inline XBRL filing bodies. For the official form names and context, see the SEC's [Form 10-K guide](https://www.sec.gov/search-filings/edgar-search-assistance/using-edgar-research-investments) and [Form 20-F](https://www.sec.gov/about/forms/form20-f.pdf).
 
 ## Review the example
 
@@ -95,7 +113,7 @@ Reporting-period bounds are checked by the PDF verifier. Historical availability
 |---|---|
 | [pdf.py](src/index_reconstitution/pdf.py) | Pinned extraction, bounded section validation, evidence records, and proof verification |
 | [bindings.py](src/index_reconstitution/bindings.py) | Local file bindings, hashes, and deterministic JSON |
-| [filings.py](src/index_reconstitution/filings.py) | Parsing retained SEC-style metadata and headers; no acquisition client |
+| [filings.py](src/index_reconstitution/filings.py) | Parsing retained SEC submissions metadata and original filing headers, including Forms 10-K and 20-F |
 | [review.py](src/index_reconstitution/review.py) | Typed identity, provenance, methodology, availability, and eligibility contracts |
 | [_passages.py](src/index_reconstitution/_passages.py) | Personnel-heading and career-paragraph exclusions |
 | [_selection.py](src/index_reconstitution/_selection.py) | Deterministic reviewer ranking with representation across permitted section roles |
@@ -112,7 +130,8 @@ Use the complete demo for proof construction, correspondence checks, quote repla
 
 ## Scope and limitations
 
-- Supports the reviewed 10-K PDF correspondence path and explicit section maps. It does not automatically discover filings or infer a section map.
+- Supports Form 10-K and Form 20-F submissions metadata/header parsing. The reviewed PDF correspondence path and explicit section maps are Form 10-K only; a Form 20-F PDF adapter is not included.
+- Does not automatically discover filings, infer a section map, or parse SEC HTML/Inline XBRL filing bodies.
 - Uses a text layer, with no OCR, table reconstruction, or invented text.
 - Applies deterministic paragraph filters and term-based reviewer ranking. These are inspectable heuristics, not a learned thematic classifier.
 - Rejects encrypted PDFs, invalid page selections, inconsistent bindings, and inadmissible section boundaries. File and page limits are input bounds, not an execution sandbox for hostile documents.
