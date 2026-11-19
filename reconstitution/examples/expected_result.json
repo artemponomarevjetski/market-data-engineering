@@ -1,0 +1,173 @@
+{
+  "eligibility_reviews": {
+    "confirmed_synthetic_rule": {
+      "availability_reason": "input was available by review cutoff",
+      "availability_status": "PASS",
+      "availability_time": "2025-03-03T14:00:00+00:00",
+      "methodology_confirmed": true,
+      "methodology_version": "synthetic-demo-v1",
+      "review_cutoff": "2025-03-04T20:00:00+00:00",
+      "scope": "One explicit synthetic rule only; not actual index eligibility or an investment recommendation.",
+      "status": "ELIGIBLE",
+      "unresolved_reasons": []
+    },
+    "late_availability": {
+      "availability_reason": "input became available after review cutoff",
+      "availability_status": "FAIL",
+      "availability_time": "2025-03-04T20:00:01+00:00",
+      "methodology_confirmed": true,
+      "methodology_version": "synthetic-demo-v1",
+      "review_cutoff": "2025-03-04T20:00:00+00:00",
+      "scope": "One explicit synthetic rule only; not actual index eligibility or an investment recommendation.",
+      "status": "UNRESOLVED",
+      "unresolved_reasons": [
+        "retained-source-available: input became available after review cutoff"
+      ]
+    },
+    "unconfirmed_methodology": {
+      "availability_reason": "input was available by review cutoff",
+      "availability_status": "PASS",
+      "availability_time": "2025-03-03T14:00:00+00:00",
+      "methodology_confirmed": false,
+      "methodology_version": "synthetic-demo-v1",
+      "review_cutoff": "2025-03-04T20:00:00+00:00",
+      "scope": "One explicit synthetic rule only; not actual index eligibility or an investment recommendation.",
+      "status": "UNRESOLVED",
+      "unresolved_reasons": [
+        "methodology version is unconfirmed"
+      ]
+    },
+    "unknown_availability": {
+      "availability_reason": "availability time is unknown",
+      "availability_status": "UNRESOLVED",
+      "availability_time": null,
+      "methodology_confirmed": true,
+      "methodology_version": "synthetic-demo-v1",
+      "review_cutoff": "2025-03-04T20:00:00+00:00",
+      "scope": "One explicit synthetic rule only; not actual index eligibility or an investment recommendation.",
+      "status": "UNRESOLVED",
+      "unresolved_reasons": [
+        "retained-source-available: availability time is unknown"
+      ]
+    }
+  },
+  "evidence": [
+    {
+      "accession_number": "9999999999-25-000001",
+      "location_basis": "PDF_PAGE_LAYOUT_TEXT_OFFSETS_V1:pypdf:6.10.0",
+      "page_text_sha256": "6be6a670a4be9bddbed3c89456971cd605a5ca3251e5b2badce87037d13ea1b8",
+      "passage_id": "0496f9c8cc85ce13d68d74653eee6cbd6edb2a6a2c1e067c2473837a4cfb5a3f",
+      "pdf_page": 2,
+      "primary_eligible": true,
+      "quote": "Synthetic Example Industries manufactures battery storage modules for\nfictional industrial customers. This paragraph describes an illustrative\noperating activity solely to exercise evidence extraction. It contains no real\ncompany research, customer information, or investment conclusion.",
+      "sec_body_byte_equivalence_verified": false,
+      "section": "Item 1. Business",
+      "section_role": "BUSINESS",
+      "source_binding_basis": "RETAINED_PDF_REEXTRACTION_AND_SEC_IDENTITY_PERIOD_CORRESPONDENCE",
+      "source_end": 414,
+      "source_sha256": "4eb8b2312b6089775e3040f2442db81115ded144a7a87c5991fdb2c780e74bdd",
+      "source_start": 127,
+      "source_url": "https://synthetic-issuer.example/reports/annual-2024.pdf",
+      "text": "Synthetic Example Industries manufactures battery storage modules for\nfictional industrial customers. This paragraph describes an illustrative\noperating activity solely to exercise evidence extraction. It contains no real\ncompany research, customer information, or investment conclusion.",
+      "verification_status": "PASS"
+    },
+    {
+      "accession_number": "9999999999-25-000001",
+      "location_basis": "PDF_PAGE_LAYOUT_TEXT_OFFSETS_V1:pypdf:6.10.0",
+      "page_text_sha256": "5f7a6db1dac319b43eb2b8239a208a08774b7404c82439a00a24b6c7dfffdcdc",
+      "passage_id": "88b246648093d3a9c972ca80edf60def166931478312fad3870ca730186a2fef",
+      "pdf_page": 6,
+      "primary_eligible": true,
+      "quote": "The fictional accounting notes describe battery inventory and illustrative\nproduct revenue recognition. No balance, valuation, market statistic, or real\ncustomer information appears in this fixture. Its sole purpose is to provide\nrepeatable financial-note evidence for parser tests.",
+      "sec_body_byte_equivalence_verified": false,
+      "section": "Notes to Financial Statements",
+      "section_role": "FINANCIAL_NOTES",
+      "source_binding_basis": "RETAINED_PDF_REEXTRACTION_AND_SEC_IDENTITY_PERIOD_CORRESPONDENCE",
+      "source_end": 313,
+      "source_sha256": "4eb8b2312b6089775e3040f2442db81115ded144a7a87c5991fdb2c780e74bdd",
+      "source_start": 31,
+      "source_url": "https://synthetic-issuer.example/reports/annual-2024.pdf",
+      "text": "The fictional accounting notes describe battery inventory and illustrative\nproduct revenue recognition. No balance, valuation, market statistic, or real\ncustomer information appears in this fixture. Its sole purpose is to provide\nrepeatable financial-note evidence for parser tests.",
+      "verification_status": "PASS"
+    },
+    {
+      "accession_number": "9999999999-25-000001",
+      "location_basis": "PDF_PAGE_LAYOUT_TEXT_OFFSETS_V1:pypdf:6.10.0",
+      "page_text_sha256": "32addc4912eafdda068dfb12422b1debe42a70816935485ca9655814ac44a5ba",
+      "passage_id": "f905add348e5bd1f42b55ce211248f3cb85fd2f931928e48b57419e6862412cd",
+      "pdf_page": 4,
+      "primary_eligible": true,
+      "quote": "In this synthetic scenario, battery module sales are described as a source of\noperating revenue. The amounts and conclusions are deliberately omitted. This\nparagraph tests a separate operating and financial evidence section without\nmaking a claim about an actual business.",
+      "sec_body_byte_equivalence_verified": false,
+      "section": "Item 7. Management Discussion and Analysis",
+      "section_role": "OPERATING_FINANCIAL",
+      "source_binding_basis": "RETAINED_PDF_REEXTRACTION_AND_SEC_IDENTITY_PERIOD_CORRESPONDENCE",
+      "source_end": 316,
+      "source_sha256": "4eb8b2312b6089775e3040f2442db81115ded144a7a87c5991fdb2c780e74bdd",
+      "source_start": 44,
+      "source_url": "https://synthetic-issuer.example/reports/annual-2024.pdf",
+      "text": "In this synthetic scenario, battery module sales are described as a source of\noperating revenue. The amounts and conclusions are deliberately omitted. This\nparagraph tests a separate operating and financial evidence section without\nmaking a claim about an actual business.",
+      "verification_status": "PASS"
+    }
+  ],
+  "fixture": {
+    "accession_number": "9999999999-25-000001",
+    "cik": "9999999999",
+    "issuer": "Synthetic Example Industries",
+    "notice": "All documents and issuer identifiers are fictional fixtures. No source authenticity or real company conclusion is claimed.",
+    "offline": true,
+    "symbol": "SYNTHDEMO",
+    "synthetic": true
+  },
+  "parser": {
+    "method": "PDF_PAGE_LAYOUT_TEXT_OFFSETS_V1",
+    "name": "pypdf",
+    "version": "6.10.0"
+  },
+  "provenance": {
+    "synthetic_annual_report.pdf": {
+      "bytes": 4702,
+      "path": "synthetic_annual_report.pdf",
+      "sha256": "4eb8b2312b6089775e3040f2442db81115ded144a7a87c5991fdb2c780e74bdd"
+    },
+    "synthetic_header.sgml": {
+      "bytes": 339,
+      "path": "synthetic_header.sgml",
+      "sha256": "e16b76b0fb1724a5f4200b3d655b8a75df51cd33fcd2b53e32bece1df68be399"
+    },
+    "synthetic_receipt.json": {
+      "bytes": 287,
+      "path": "synthetic_receipt.json",
+      "sha256": "8718c4ce4934370961a6f92cd97c35558ce9ee324af9a2e236ce0c48f20ba128"
+    },
+    "synthetic_submissions.json": {
+      "bytes": 508,
+      "path": "synthetic_submissions.json",
+      "sha256": "a49f7f77b04552ef210d063985b778b9b120d66ab904e906eb379300e87921ac"
+    }
+  },
+  "quote_replay": {
+    "all_offsets_exact": true,
+    "offset_unit": "Unicode code points within each extracted page string",
+    "records_checked": 3,
+    "transcript_file": "page_texts.json"
+  },
+  "schema_version": "index-reconstitution.demo.v1",
+  "source_validation": {
+    "acceptance_timestamp": "2025-03-03T14:00:00+00:00",
+    "availability_basis": "SEC_ACCEPTANCE_PROXY",
+    "filing_date": "2025-03-03",
+    "page_text_extraction": "PINNED_PYPDF",
+    "point_in_time_eligibility": "NOT_EVALUATED",
+    "reporting_period_basis": "PDF_COVER_BODY_AND_SEC_METADATA_HEADER",
+    "reporting_period_end": "2024-12-31",
+    "sec_body_byte_equivalence_verified": false,
+    "source_accession": "9999999999-25-000001",
+    "source_form": "10-K",
+    "source_format": "PDF",
+    "source_origin": "SYNTHETIC",
+    "source_origin_verified": false,
+    "source_sha256": "4eb8b2312b6089775e3040f2442db81115ded144a7a87c5991fdb2c780e74bdd",
+    "source_status": "SYNTHETIC_ANNUAL_PDF_VALIDATED_METADATA_CORRESPONDENCE"
+  }
+}

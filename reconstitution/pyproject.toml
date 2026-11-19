@@ -1,0 +1,14 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "index-reconstitution-evidence"
+version = "0.1.0"
+description = "Offline PDF evidence extraction and explicit index-review contracts"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = ["pypdf==6.10.0", "tzdata>=2025.2; platform_system == 'Windows'"]
+
+[tool.setuptools.packages.find]
+where = ["src"]

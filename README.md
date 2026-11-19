@@ -6,10 +6,17 @@ A collection of Python implementations, SQL Server queries, and Docker packaging
 
 The implementation centers on **Python CSV processing, T-SQL, and SQL Server access through ODBC**. The repository brings together the original market-data, containerization, and standalone SQL projects in one place.
 
+## Runnable PDF evidence demo
+
+[PDF Evidence for Index Reconstitution](reconstitution/) is a compact Python example for turning retained annual-report PDFs into traceable evidence for an index-research review. It validates file hashes and filing correspondence, preserves exact offsets in extracted page text, and evaluates evidence availability separately from methodology eligibility.
+
+Start with the [quick start and scope](reconstitution/README.md), inspect the [synthetic example](reconstitution/examples/run_pdf_demo.py) and [example result](reconstitution/examples/expected_result.json), then review the [tests](reconstitution/tests/). The example runs locally without a network service or API key after installing its pinned dependency. Browsing the code and result on GitHub requires no local clone.
+
 ## Repository map
 
 | Location | What it contains | Browse first |
 |---|---|---|
+| [reconstitution/](reconstitution/) | PDF evidence, filing correspondence and explicit eligibility review, with a synthetic runnable example | [Quick start](reconstitution/README.md) |
 | [python/](python/) | Dated ETL and corporate-event implementations, comparison variants, and supporting artifacts | [2020-02-03.py](python/2020-02-03.py) |
 | [python-sql-data-external-data-providers/](python-sql-data-external-data-providers/) | Provider ETL and a CTA Plan alert-monitoring example | [etl_code_python_sql.py](python-sql-data-external-data-providers/etl_code_python_sql.py) |
 | [containerized_corporate_events/](containerized_corporate_events/) | Corporate-action extraction, snapshot comparison, and the original Docker recipe | [corporate_events.py](containerized_corporate_events/corporate_events.py) |
@@ -85,7 +92,7 @@ The script starts its browser and polling loop at module level. Review the brows
 
 ## Getting started
 
-Clone the consolidated repository:
+To run a component locally, optionally clone the consolidated repository:
 
     git clone https://github.com/artemponomarevjetski/market-data-engineering.git
     cd market-data-engineering
