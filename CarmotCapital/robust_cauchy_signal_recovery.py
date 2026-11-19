@@ -2,8 +2,9 @@
 """Recover two shared sinusoidal frequencies under independent Cauchy noise.
 
 New educational implementation (2026), based on the technical problem in a
-19 August 2020 discussion with George Sokoloff. This is not recovered historical
-code or a validated market prediction model. See problem_formulation.md.
+19 August 2020 discussion with the CEO of Carmot Co. (profile linked in README.md).
+This is not recovered historical code or a validated market prediction model.
+See problem_formulation.md.
 
 Requires NumPy and SciPy. Importing this module performs no computation or I/O.
 """

@@ -1,8 +1,8 @@
-# Carmot Capital: research discussions with George Sokoloff
+# Carmot Capital: research discussions
 
-This folder records Art Ponomarev's account of research collaboration and technical discussions with George Sokoloff. Art describes work involving Python analysis of strange attractors, heavy-tailed Cauchy distributions, and possible applications of agentic AI to commerce.
+This folder records Art Ponomarev's account of research collaboration and technical discussions with the [CEO of Carmot Co.](https://www.linkedin.com/in/george-sokoloff-77b27a1). Art describes work involving Python analysis of strange attractors, heavy-tailed Cauchy distributions, and possible applications of agentic AI to commerce.
 
-George's historical affiliation with **Carmot Capital LLC** is documented in an [SEC issuer filing](https://www.sec.gov/Archives/edgar/data/1685528/000109544918000105/xslFormDX01/primary_doc.xml), which identifies him as its managing member. A [conference organizer's profile](https://www.terrapinn.com/template/live/engage/6929/15112) identifies him as founder and chief investment officer. The correspondence below records Art's exchanges with George; it does not establish a particular fund vehicle as the contracting party.
+The correspondent's historical affiliation with **Carmot Capital LLC** is documented in an [SEC issuer filing](https://www.sec.gov/Archives/edgar/data/1685528/000109544918000105/xslFormDX01/primary_doc.xml), which identifies him as its managing member. A [conference organizer's profile](https://www.terrapinn.com/template/live/engage/6929/15112) identifies him as founder and chief investment officer. The correspondence below records Art's exchanges with the CEO of Carmot Co.; it does not establish a particular fund vehicle as the contracting party.
 
 ## Contents
 
@@ -16,7 +16,7 @@ Both Python modules were written in **2026** for this repository. Original histo
 
 ## Dated technical correspondence: 19 August 2020
 
-In correspondence supplied by Art, George formulated a problem involving two cosine signals, a full-row-rank mixing matrix with 1,000 output channels, 300 time samples, and additive Cauchy noise. The goal was to recover the two frequencies and phases.
+In correspondence supplied by Art, the CEO of Carmot Co. formulated a problem involving two cosine signals, a full-row-rank mixing matrix with 1,000 output channels, 300 time samples, and additive Cauchy noise. The goal was to recover the two frequencies and phases.
 
 The [technical formulation](problem_formulation.md) preserves the distinction between the original question and the new implementation. It also explains ambiguities in the phase notation, the matrix-coefficient condition, and the sampling rate. The correspondence documents a research question, not a completed historical recovery result.
 

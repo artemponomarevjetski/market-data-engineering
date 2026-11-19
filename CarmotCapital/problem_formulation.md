@@ -2,9 +2,10 @@
 
 ## Historical problem
 
-On 19 August 2020, George Sokoloff described a signal-recovery problem to Artem
-Ponomarev: infer the frequencies and phases of two sinusoidal factors from
-1,000 observed channels, each containing 300 time samples, after linear mixing
+On 19 August 2020, the [CEO of Carmot Co.](https://www.linkedin.com/in/george-sokoloff-77b27a1)
+described a signal-recovery problem to Artem Ponomarev: infer the frequencies and
+phases of two sinusoidal factors from 1,000 observed channels, each containing
+300 time samples, after linear mixing
 and the addition of Cauchy noise. This technical summary is based on
 correspondence supplied by Artem.
 
@@ -52,7 +53,7 @@ $f_k=b_k/(2\pi)$, so the same ratio constraint applies to $f_1,f_2$.
   defining angular versus cyclic units. That statement does not establish
   alias-free sampling.
 
-These are explicit working assumptions, not corrections attributed to George.
+These are explicit working assumptions, not corrections attributed to the original correspondent.
 
 ## What can be identified?
 
